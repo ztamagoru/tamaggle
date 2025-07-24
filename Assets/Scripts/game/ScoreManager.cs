@@ -48,8 +48,8 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateMultiplier()
     {
-        int total = PegManager.instance.TotalOrangePegs;
-        int remaining = PegManager.instance.CurrentOrangePegs;
+        int total = GameManager.instance.TotalOrangePegs;
+        int remaining = GameManager.instance.CurrentOrangePegs;
 
         if (total == 0)
         {

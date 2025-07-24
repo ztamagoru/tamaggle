@@ -5,6 +5,7 @@ using UnityEngine;
 public class PegDeletion : MonoBehaviour
 {
     public static PegDeletion pegDeletion = new PegDeletion();
+    //public static PegDeletion pegDeletion;
 
     private AudioClip pegDestroySFX;
 

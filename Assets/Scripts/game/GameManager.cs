@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PegManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static PegManager instance;
+    public static GameManager instance;
 
     [SerializeField] private GameObject orangePegPrefab;
     [SerializeField] private int _orangePegCount;
@@ -20,6 +20,8 @@ public class PegManager : MonoBehaviour
 
     private void Start()
     {
+        BallCounter.counter.numBall = 10;
+
         Peg[] bluePegs = FindObjectsOfType<Peg>();
         System.Random rand = new System.Random();
 

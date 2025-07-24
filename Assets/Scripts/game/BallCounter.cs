@@ -7,7 +7,7 @@ public class BallCounter
 {
     public static BallCounter counter = new BallCounter();
 
-    int balls = 10;
+    int balls;
 
     public Action<int> counterChange;
 

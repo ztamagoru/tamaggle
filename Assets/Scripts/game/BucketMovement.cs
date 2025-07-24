@@ -9,25 +9,29 @@ public class BucketMovement : MonoBehaviour
     public float maxX = 4f;
 
     bool isMovingRight = true;
+    bool moving = true;
 
     private void Update()
     {
-        if (isMovingRight)
+        if (moving)
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
-            if (transform.position.x >= maxX)
+            if (isMovingRight)
             {
-                transform.position.Set(maxX, transform.position.y, 0);
-                isMovingRight = !isMovingRight;
+                transform.position += Vector3.right * speed * Time.deltaTime;
+                if (transform.position.x >= maxX)
+                {
+                    transform.position.Set(maxX, transform.position.y, 0);
+                    isMovingRight = !isMovingRight;
+                }
             }
-        }
-        else
-        {
-            transform.position -= Vector3.right * speed * Time.deltaTime;
-            if (transform.position.x <= minX)
+            else
             {
-                transform.position.Set(minX, transform.position.y, 0);
-                isMovingRight = !isMovingRight;
+                transform.position -= Vector3.right * speed * Time.deltaTime;
+                if (transform.position.x <= minX)
+                {
+                    transform.position.Set(minX, transform.position.y, 0);
+                    isMovingRight = !isMovingRight;
+                }
             }
         }
     }
