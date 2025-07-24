@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void LoadLevel(int sceneIndex)
+    public void LoadRandomLevel()
     {
-        SceneManager.LoadScene(sceneIndex);
+        int index = Random.Range(1, SceneManager.sceneCountInBuildSettings);
+        Debug.Log($"Loading random level with index: {index}");
+        //SceneManager.LoadScene(index);
     }
 
     public void QuitGame()
